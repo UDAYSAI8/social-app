@@ -13,8 +13,10 @@ function SearchUser() {
   const [data, setData] = useState([]);
   const [userData, setUserData] = useState({});
   useEffect(()=>{
-    axiosInstance().get("/users/"+location.pathname.split("/")[2]).then(res=>{
+    axiosInstance().get("/current-user").then(res=>{
       setName(res.data.data._id);
+    });
+    axiosInstance().get("/users/"+location.pathname.split("/")[2]).then(res=>{
       setUserData(res.data.data);
     });
     axiosInstance().get("/users/"+location.pathname.split("/")[2]+"/posts").then(res=> setData(res.data.data));
@@ -32,7 +34,9 @@ function SearchUser() {
           alert("No user found");
         }
         else{
+
           navigate("/profile/"+res.data.data[0]._id);
+          
         }
         
   })};
