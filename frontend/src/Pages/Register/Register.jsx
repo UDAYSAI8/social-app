@@ -3,6 +3,7 @@ import axiosInstance from "../../axios";
 import { Navbar ,NavbarBrand,NavItem,Button} from "reactstrap";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import "./Register.css"
 
 const Register = () => {
   const navigate = useNavigate();
@@ -67,6 +68,7 @@ const Register = () => {
         </NavItem>
       </Navbar>
       <form onSubmit={addUser}>
+        <label htmlFor="register" className="label-reg">Register</label>
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" id="name" onChange={(e) => { setName(e.target.value);}} value={name}/>
