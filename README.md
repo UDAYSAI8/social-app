@@ -24,7 +24,7 @@ This is a social media platform built using the MERN stack (MongoDB, Express.js,
 
 ## Installation
 
-1. Clone the repository: git clone https://github.com/UDAYSAI*/social-app.git
+1. Clone the repository: git clone https://github.com/UDAYSAI8/social-app.git
 2. Navigate to the project directory: cd social-media-platform
 3. Install dependencies for both frontend and backend: cd frontend && npm install     cd frontend && npm install
 4. Set up environment variables.
